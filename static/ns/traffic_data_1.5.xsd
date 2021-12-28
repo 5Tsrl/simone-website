@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Aurelio Ferrante (5T srl) -->
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:td="http://www.5t.torino.it/simone/ns/traffic_data" targetNamespace="http://www.5t.torino.it/simone/ns/traffic_data" elementFormDefault="qualified">
+	<xs:element name="traffic_data">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="location_reference" type="td:location_referenceType">
+					<xs:annotation>
+						<xs:documentation>Definisce il riferimento spaziale dei dati</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:choice>
+					<xs:element name="RD_data" type="td:RD_dataType" maxOccurs="unbounded"/>
+					<xs:element name="MRD_data" type="td:MRD_dataType" maxOccurs="unbounded"/>
+					<xs:element name="TT_data" type="td:TT_type" maxOccurs="unbounded"/>
+					<xs:element name="TT_profiled_data" type="td:TTprofiledType" maxOccurs="unbounded"/>
+					<xs:element name="OD_data" type="td:OD_type" maxOccurs="unbounded"/>
+					<xs:element name="OD_profiled_data" type="td:ODprofiledType" maxOccurs="unbounded"/>
+					<xs:element name="FDT_data" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="td:FDT_type"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PK_data" type="td:PK_type" maxOccurs="unbounded"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="datatype" type="td:trafficDataType" use="required">
+				<xs:annotation>
+					<xs:documentation>misura / previsione / profilo</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="generation_time" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>istante di generazione del feed</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="start_time" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>istante di inizio periodo cui sono riferiti i dati</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="end_time" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>istante di fine periodo cui sono riferiti i dati</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="source" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>identificativo del fornitore dei dati</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="trafficDataType">
+		<xs:annotation>
+			<xs:documentation>definisce il tipo di dati di traffico che il documento corrente trasporta</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="misura"/>
+			<xs:enumeration value="previsione"/>
+			<xs:enumeration value="profilo"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="profileAttributes">
+		<xs:annotation>
+			<xs:documentation>attributi atti a profilare il dato</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="end_time" type="xs:time" use="required">
+			<xs:annotation>
+				<xs:documentation>ora e minuti di fine periodo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="start_time" type="xs:time" use="required">
+			<xs:annotation>
+				<xs:documentation>ora e minuti di inizio periodo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="day_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>id tipo giorno</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:complexType name="location_referenceType">
+		<xs:choice>
+			<xs:element name="tmc_info" type="td:tmcType"/>
+			<xs:element name="detailed_graph_info">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="td:detailedGraphType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="WGS84_info">
+				<xs:annotation>
+					<xs:documentation>la presenza dell'elemento indica che le coordinate geografiche sono espresse nel sistema WGS84</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="tmcType">
+		<xs:attribute name="cid" type="xs:integer" use="optional" default="25">
+			<xs:annotation>
+				<xs:documentation>Identificativo TMC della nazione</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="tabcd" type="xs:integer" use="required">
+			<xs:annotation>
+				<xs:documentation>Identificativo TMC della location table</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="locdb_ver" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Versione del TMC location DB utilizzato</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="detailedGraphType">
+		<xs:attribute name="name">
+			<xs:annotation>
+				<xs:documentation>identifica il grafo di dettaglio</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="version" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Versione del grafo di dettaglio in uso</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RD_dataType">
+		<xs:attribute name="veh" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>identificativo anonimo del veicolo</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="timestamp" type="xs:dateTime" use="required">
+			<xs:annotation>
+				<xs:documentation>istante di tempo a cui sono riferiti i dati</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lat" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>latitudine nel sistema WGS84</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lng" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Longitudine nel sistema WGS84</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="alt" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>altitudine</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bearing" type="xs:decimal"/>
+		<xs:attribute name="speed" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>velocita' istantanea rilevata [m/s]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="hdop" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>indice di precisione del fix GPS</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="tracking_distance" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>Distanza percorsa rispetto a rilevazione precedente [m]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="global_distance" type="xs:decimal"/>
+		<xs:attribute name="event" use="required">
+			<xs:annotation>
+				<xs:documentation>evento che determina la rilevazione (es. Sampling, KeyOn, KeyOFF, Apertura Porta, etc.)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="sampling"/>
+					<xs:enumeration value="keyon"/>
+					<xs:enumeration value="keyoff"/>
+					<xs:enumeration value="dooropened"/>
+					<xs:enumeration value="doorclosed"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="tracking_type" type="xs:string"/>
+		<xs:attribute name="vehicle_type" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="AU"/>
+					<xs:enumeration value="VC"/>
+					<xs:enumeration value="VP"/>
+					<xs:enumeration value="TX"/>
+					<xs:enumeration value="MPU"/>
+					<xs:enumeration value="MPE"/>
+					<xs:enumeration value="MTR"/>
+					<xs:enumeration value="BUS"/>
+					<xs:enumeration value="MSP"/>
+					<xs:enumeration value="M"/>
+					<xs:enumeration value="M1"/>
+					<xs:enumeration value="M2"/>
+					<xs:enumeration value="M3"/>
+					<xs:enumeration value="N"/>
+					<xs:enumeration value="N1"/>
+					<xs:enumeration value="N2"/>
+					<xs:enumeration value="N3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="vehicle_information" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="MRD_dataType">
+		<xs:complexContent>
+			<xs:extension base="td:RD_dataType">
+				<xs:attribute name="lcd1" type="xs:integer" use="required"/>
+				<xs:attribute name="lcd2" type="xs:integer" use="required"/>
+				<xs:attribute name="offset" type="xs:decimal" use="required">
+					<xs:annotation>
+						<xs:documentation>distanza percorsa sull'arco [m]</xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TT_type">
+		<xs:annotation>
+			<xs:documentation>Tratta stradale, delimitata da due location codes, per cui viene fornita la velocita' media ed il tempo di percorrenza. La sequenza (LCD1 - LCD2) determina il verso di percorrenza.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="lcd1" type="xs:integer" use="required"/>
+		<xs:attribute name="lcd2" type="xs:integer" use="required"/>
+		<xs:attribute name="len" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>lunghezza dell'arco [m]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="time" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Tempo di percorrenza della tratta [s]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="speed" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>velocita' media [km/h]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="n_vehicles" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>numero veicoli campione che hanno contribuito al calcolo della misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="std_dev" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>deviazione standard della distribuzione dei campioni</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="accuracy" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>validità della misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="estimated_speed" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>stima della elocita' attuale</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="q_idx" use="optional">
+			<xs:annotation>
+				<xs:documentation>indice di qualita' della misura (1=min, 5=max)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:enumeration value="1"/>
+					<xs:enumeration value="2"/>
+					<xs:enumeration value="3"/>
+					<xs:enumeration value="4"/>
+					<xs:enumeration value="5"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="vehicle_type" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>tipo di veicolo cui è riferito il dato</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="OD_type">
+		<xs:annotation>
+			<xs:documentation>coppia di zone, identificata da due location codes, per cui viene fornito il numero di viaggi</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="lcd1" type="xs:integer" use="required"/>
+		<xs:attribute name="lcd2" type="xs:integer" use="required"/>
+		<xs:attribute name="vehicle_type" type="xs:string" use="required"/>
+		<xs:attribute name="trips" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>numero di viaggi</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="TTprofiledType">
+		<xs:complexContent>
+			<xs:extension base="td:TT_type">
+				<xs:attributeGroup ref="td:profileAttributes"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ODprofiledType">
+		<xs:complexContent>
+			<xs:extension base="td:OD_type">
+				<xs:attributeGroup ref="td:profileAttributes"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="FDT_type">
+		<xs:annotation>
+			<xs:documentation>Flussi di traffico lungo un arco TMC o attraverso una sezione di misura. Il nodo LCD è quello di inizio dell'arco interessato, nella direzione di percorrenza specificata.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="speedflow" type="td:speedFlowType" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="source">
+			<xs:annotation>
+				<xs:documentation>identificativo della sorgente/fornitore dei dati</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="station_id">
+			<xs:annotation>
+				<xs:documentation>Identificativo della stazione di misura (se disponibile)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lcd1" type="xs:integer" use="required">
+			<xs:annotation>
+				<xs:documentation>Codifica TMC del nodo iniziale dell’arco.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Road_LCD" type="xs:integer">
+			<xs:annotation>
+				<xs:documentation>Codifica TMC della strada su cui insiste la stazione di misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Road_name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Sigla o nome della strada su cui insiste la stazione di misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="offset" use="required">
+			<xs:annotation>
+				<xs:documentation>distanza dall'inizio dell'arco lungo il verso di percorrenza [m]</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="direction" use="required">
+			<xs:annotation>
+				<xs:documentation>Direzione di percorrenza TMC (positiva o negativa)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lat" type="xs:decimal" use="optional"/>
+		<xs:attribute name="lng" type="xs:decimal" use="optional"/>
+		<xs:attribute name="heading" type="xs:integer" use="optional">
+			<xs:annotation>
+				<xs:documentation>Direzione (angoli nord) di attraversamento della sezione di misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Row" type="xs:integer" use="optional" default="1">
+			<xs:annotation>
+				<xs:documentation>Numero di corsie della sezione di misura</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="occupation">
+			<xs:annotation>
+				<xs:documentation>Tasso di occupazione dei sensori </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="accuracy">
+			<xs:annotation>
+				<xs:documentation>validità della misura (percentuale)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="period">
+			<xs:annotation>
+				<xs:documentation>periodo di aggregazione in minuti</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="PK_type">
+		<xs:annotation>
+			<xs:documentation>Parcheggio in struttura. Include il numero di stalli veicolari e (se disponibile) l'occupazione in tempo reale. Le coordinate sono quelle dell'ingresso veicolare principale.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Nome pubblico del parcheggio</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="ID" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Identificativo univoco del parcheggio (se disponibile)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="status" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Ulteriori informazioni sul parcheggio (aperto/chiuso)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Total" type="xs:integer" use="required">
+			<xs:annotation>
+				<xs:documentation>Numero di stalli totali disponibili a rotazione</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Free" type="xs:integer">
+			<xs:annotation>
+				<xs:documentation>Numero di stalli attualmente liberi</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="tendence" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>Tendenza di riempimento (+1/-1)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lat" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Latitudine dell'accesso veicolare principale</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lng" type="xs:decimal" use="required">
+			<xs:annotation>
+				<xs:documentation>Longitudine dell'accesso veicolare principale</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Road_LCD" type="xs:integer">
+			<xs:annotation>
+				<xs:documentation>Codifica TMC della strada su cui si affaccia il parcheggio</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Road_name" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Sigla o nome della strada su cui si affaccia il parcheggio</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="speedFlowType">
+		<xs:annotation>
+			<xs:documentation>Dati di flusso e velocità rilevati da una sezione, per tipologia di veicolo</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="VehicleType" default="all">
+			<xs:annotation>
+				<xs:documentation>Tipologia di veicolo cui si riferisce il conteggio (all, light, heavy)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="all"/>
+					<xs:enumeration value="light"/>
+					<xs:enumeration value="heavy"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="flow" use="required">
+			<xs:annotation>
+				<xs:documentation>Flusso veicolare (veicoli/ora)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="speed">
+			<xs:annotation>
+				<xs:documentation>Velocità media (Km/h)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="harmspeed">
+			<xs:annotation>
+				<xs:documentation>Velocità media armonica (Km/h)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

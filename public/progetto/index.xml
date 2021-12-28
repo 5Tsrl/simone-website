@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduzione on </title>
+    <link>https://www.simone.5t.torino.it/progetto/</link>
+    <description>Recent content in Introduzione on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Fri, 17 Dec 2021 18:30:31 +0100</lastBuildDate><atom:link href="https://www.simone.5t.torino.it/progetto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architettura di riferimento</title>
+      <link>https://www.simone.5t.torino.it/progetto/architettura/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/architettura/</guid>
+      <description>L&amp;rsquo;architettura del sistema prevede l&amp;rsquo;estensione delle funzionalità delle centrali di controllo della mobilità con informazioni di traffico in tempo reale generati da flotte attrezzate (floating car data). </description>
+    </item>
+    
+    <item>
+      <title>Obiettivi generali</title>
+      <link>https://www.simone.5t.torino.it/progetto/obiettivi/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/obiettivi/</guid>
+      <description>Il progetto è coerente con un obiettivo più generale di spingere il Sistema Paese verso l’innovazione in un settore fondamentale come la mobilità per i suoi aspetti economici, ambientali e di qualità della vita. Il progetto si propone lo sviluppo di un modello che possa essere adottato su scala nazionale, basato sulla standardizzazione dei servizi e dei modelli gestionali e in grado di garantire l’interoperabilità tra i veicoli circolanti ed i centri di gestione della mobilità delle diverse aree metropolitane.</description>
+    </item>
+    
+    <item>
+      <title>Introduzione</title>
+      <link>https://www.simone.5t.torino.it/progetto/introduzione/</link>
+      <pubDate>Fri, 17 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/introduzione/</guid>
+      <description>In Italia l’utilizzo integrato di tecnologie informatiche e telematiche nel mondo dei trasporti ha consentito, nel corso degli ultimi anni, di sviluppare sistemi per il monitoraggio e la gestione di flotte, per il controllo del traffico e la regolazione dei cicli semaforici, per il rilievo dell’inquinamento atmosferico e per l’erogazione di servizi di infomobilità agli utenti della strada. Questi sistemi, seppure sviluppati in forma ancora poco coordinata e con risultati differenti, hanno evidenziato il ruolo strategico delle tecnologie telematiche nella risoluzione di problemi relativi alla mobilità.</description>
+    </item>
+    
+  </channel>
+</rss>

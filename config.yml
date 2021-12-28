@@ -1,0 +1,170 @@
+
+# hugo server -D --bind=172.21.30.5
+
+baseURL: https://www.simone.5t.torino.it/
+# theme: "PaperMod"
+theme: "mainroad"
+languageCode: "it-IT"
+Language:
+  Lang: it
+title:
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+menu:
+  main:
+    - identifier: progetto
+      name: Il Progetto
+      url: /progetto/
+      weight: 10
+    - identifier: introduzione
+      name: Introduzione
+      url: /progetto/introduzione/
+      parent: progetto
+      weight: 1
+    - identifier: obiettivi
+      name: Obiettivi generali
+      url: /progetto/obiettivi/
+      parent: progetto
+      weight: 2
+    - identifier: architettura
+      name: Architettura di riferimento
+      url: /progetto/architettura/
+      parent: progetto
+      weight: 3
+    - identifier: servizi
+      Pre: "<i class='fa fa-heart'></i>"
+      name: Servizi previsti
+      url: /servizi/
+      weight: 15
+    - identifier: informazioni
+      name: Informazioni agli automobilisti
+      url: /servizi/informazioni/
+      parent: servizi
+      weight: 1
+    - identifier: monitoraggio
+      name: Monitoraggio del traffico
+      url: /servizi/monitoraggio/
+      parent: servizi
+      weight: 2
+    - identifier: domanda
+      name: Domanda di mobilità
+      url: /servizi/domanda/
+      parent: servizi
+      weight: 3
+    - identifier: benefici
+      name: Benefici attesi
+      url: /benefici/
+      weight: 30
+    - identifier: analisi
+      name: Analisi sul traffico
+      url: /benefici/analisi/
+      parent: benefici
+      weight: 1
+    - identifier: ztl
+      name: Gestione ZTL
+      url: /benefici/ztl/
+      parent: benefici
+      weight: 2
+    - identifier: centri
+      name: Gestione dei centri nei piccoli comuni
+      url: /benefici/centri/
+      parent: benefici
+      weight: 3
+    - identifier: installazioni
+      name: Installazioni
+      url: /installazioni/
+      weight: 40
+    - identifier: torino
+      name: Torino
+      url: /installazioni/torino/
+      parent: installazioni
+      weight: 1
+    - identifier: bologna
+      name: Bologna
+      url: /installazioni/bologna/
+      parent: installazioni
+      weight: 2
+    - identifier: cagliari
+      name: Cagliari
+      url: /installazioni/cagliari/
+      parent: installazioni
+      weight: 3
+    - identifier: firenze
+      name: Firenze
+      url: /installazioni/firenze/
+      parent: installazioni
+      weight: 4
+    - identifier: genova
+      name: Genova
+      url: /installazioni/genova/
+      parent: installazioni
+      weight: 5
+    - identifier: protocollo
+      name: Protocollo
+      url: /protocollo/
+      weight: 50
+
+
+paginate: "1" # Number of posts per page
+
+Params:
+  description: "progetto Simone" # Site description. Used in meta description
+  copyright: "powered by 5T srl" # Footer copyright holder, otherwise will use site title
+  opengraph: true # Enable OpenGraph if true
+  schema: true # Enable Schema
+  twitter_cards: true # Enable Twitter Cards if true
+  readmore: false # Show "Read more" button in list if true
+  authorbox: false # Show authorbox at bottom of pages if true
+  toc: true # Enable Table of Contents
+  pager: false # Show pager navigation (prev/next links) at the bottom of pages if true
+  # post_meta: ["author", "date", "categories", "translations"] # Order of post meta information
+  # mainSections: ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat: "2006-01-02" # Change the format of dates
+  mathjax: true # Enable MathJax
+  mathjaxPath: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+  mathjaxConfig: "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  googleFontsLink: "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+  customCSS:
+    - "css/custom.css"   # Include custom CSS files
+  # customJS:
+  #   - "js/custom.js" # Include custom JS files
+
+  style:
+    vars:
+      highlightColor: '#e22d30'
+      fontFamilyPrimary: '''Open Sans'', Helvetica, Arial, sans-serif'
+      fontFamilySecondary: >-
+        SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier
+        New', monospace
+  logo:
+    # image: img/logo-simone.png
+    image: img/header2.png
+    title:
+    subtitle:
+  thumbnail:
+    visibility:
+      - list
+      - post
+  # sidebar:
+  #   home: right
+  #   list: left
+  #   single: false
+  #   widgets:
+  #     - search
+  #     - recent
+  #     - categories
+  #     - taglist
+  #     - social
+  #     - languages
+  widgets:
+    # recent_num: 5
+    categories_counter: false
+    tags_counter: false
+    # social:
+    #   facebook: username
+    #   twitter: username
+    #   instagram: username
+    #   linkedin: username
+    #   telegram: username

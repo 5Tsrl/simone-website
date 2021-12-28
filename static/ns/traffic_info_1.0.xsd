@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rev="http://www.autostrade.it/schema/road-events" xmlns:hfp="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty" targetNamespace="http://www.autostrade.it/schema/road-events" elementFormDefault="qualified">
+	<xs:element name="EVTS_GEN_DELIVERY">
+		<xs:annotation>
+			<xs:documentation>questo blocco contiene i tags
+      EVTS_RECORD_ROAD</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rev:TMC_INFO" minOccurs="0"/>
+				<xs:element ref="rev:EVTS_RECORD_ROAD" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="date" use="required">
+				<xs:annotation>
+					<xs:documentation>Data di produzione dell'XML (YYYY/MM/DD
+          hh24:mm:ss)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="numevts" type="xs:integer" use="required">
+				<xs:annotation>
+					<xs:documentation>Numero di eventi contenuti in questo XML
+          (corrispondenti l numero di EVTS_RECORD_ROAD
+          tags)</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TMC_INFO">
+		<xs:annotation>
+			<xs:documentation>Blocco opzionale con informazioni di riferimento del
+      location DB cui si riferiscono i location codes</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="cid" type="xs:integer" use="required">
+				<xs:annotation>
+					<xs:documentation>Identificativo TMC della
+          nazione</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="tabcd" type="xs:integer" use="required">
+				<xs:annotation>
+					<xs:documentation>Identificativo TMC della location
+          table</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="locdb_ver" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>Versione del TMC loction DB utilizzato per
+          generare l'XML</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EVTS_RECORD_ROAD">
+		<xs:annotation>
+			<xs:documentation>Evento di traffico</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rev:EVT_ID"/>
+				<xs:element ref="rev:ROAD"/>
+				<xs:element ref="rev:LOCATION"/>
+				<xs:element ref="rev:CAUSE" minOccurs="0"/>
+				<xs:element ref="rev:EVENT"/>
+				<xs:element ref="rev:DIVERSION"/>
+				<xs:element ref="rev:DIRECTION"/>
+				<xs:element ref="rev:DATE"/>
+				<xs:element ref="rev:ADDING_INFORMATION"/>
+				<xs:element ref="rev:ATTRIBUTES"/>
+				<xs:element ref="rev:SAD" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="for" type="xs:NCName" use="required">
+				<xs:annotation>
+					<xs:documentation>Y: evento previsionale / N: evento
+          attivo</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EVT_ID" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Codice identificativo dell'evento</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ROAD">
+		<xs:annotation>
+			<xs:documentation>LCD della strada interessata
+      dall'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Nome testuale della strada</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LOCATION">
+		<xs:annotation>
+			<xs:documentation>Blocco di localizzazione
+      dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rev:LOC_SEC" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Il tag LOC_SEC sara' presente solo in caso di
+            evento tra 2 punti (es. coda tra LOC_PRI e
+            _LOC_SEC)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="rev:LOC_PRI"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LOC_SEC">
+		<xs:annotation>
+			<xs:documentation>LCD secondario dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Nome della locailta'</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="km" type="xs:decimal" use="required">
+						<xs:annotation>
+							<xs:documentation>Kilometro dall'inizio della
+              strada</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="x" type="xs:decimal" use="required">
+						<xs:annotation>
+							<xs:documentation>Longitudine in WGS84</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="y" type="xs:decimal" use="required">
+						<xs:annotation>
+							<xs:documentation>Latitudine in WGS84</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LOC_PRI">
+		<xs:annotation>
+			<xs:documentation>LCD primario dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Nome della locailta'</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="km" type="xs:decimal">
+						<xs:annotation>
+							<xs:documentation>Kilometro dall'inizio della
+              strada</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="x" type="xs:decimal">
+						<xs:annotation>
+							<xs:documentation>Longitudine in WGS84</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="y" type="xs:decimal">
+						<xs:annotation>
+							<xs:documentation>Latitudine in WGS84</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CAUSE">
+		<xs:annotation>
+			<xs:documentation>Frase DATEX della causa dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:NMTOKEN">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Traduzione testuale della frase DATEX della
+              causa dell'evento</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EVENT">
+		<xs:annotation>
+			<xs:documentation>Frase DATEX dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:NMTOKEN">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Traduzione testuale della frase DATEX
+              dell'evento</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DIVERSION" type="xs:NCName">
+		<xs:annotation>
+			<xs:documentation>Presenza di deviazione: n: nessuna deviazione, y:
+      deviazione indicata sul luogo dell'evento</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DIRECTION">
+		<xs:annotation>
+			<xs:documentation>Codice di direzione: possibili valore sono: 0:
+      informazione di direzione non presente, 1: direzione dalla locazione
+      primaria verso la secondaria, 2: direzione dalla locazione secondaria
+      verso la primaria, 3: entrambe le direzioni, 4: l'evento si riferisce ad
+      una sola locazione e la direzione e' specificata solo in modo testuale
+      nell'attributo desc</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:integer">
+					<xs:attribute name="desc" use="required">
+						<xs:annotation>
+							<xs:documentation>Descrizione testuale della
+              direzione</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DATE">
+		<xs:annotation>
+			<xs:documentation>Informazioni sulla data dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rev:EVT_START_DATE"/>
+				<xs:element ref="rev:EVT_UPDATE_DATE"/>
+				<xs:element ref="rev:EVT_END_DATE" minOccurs="0"/>
+				<xs:sequence minOccurs="0">
+					<xs:element ref="rev:START_TIME"/>
+					<xs:element ref="rev:STOP_TIME"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EVT_START_DATE" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Data/ora di inizio della validita' dell'evento nel
+      formato YYYY-MM-DD hh24:mm:ss</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EVT_UPDATE_DATE" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Data/ora di aggiornamento dell'evento nel formato
+      YYYY-MM-DD hh24:mm:ss</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="EVT_END_DATE" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Data/ora di fine della validita' dell'evento nel
+      formato YYYY-MM-DD hh24:mm:ss</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="START_TIME" type="xs:NMTOKEN">
+		<xs:annotation>
+			<xs:documentation>Ora di inizio prevista dell'evento previsionale nel
+      formato hh24:mm.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="STOP_TIME" type="xs:NMTOKEN">
+		<xs:annotation>
+			<xs:documentation>Ora di fine prevista dell'evento previsionale nel
+      formato hh24:mm.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ADDING_INFORMATION" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Descrizione testuale completa
+      dell'evento</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ATTRIBUTES">
+		<xs:annotation>
+			<xs:documentation>Lista di attributi dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rev:ATTRIBUTE" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ATTRIBUTE">
+		<xs:annotation>
+			<xs:documentation>Attributo dell'evento</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:NMTOKEN">
+					<xs:attribute name="code" type="xs:NMTOKEN" use="required">
+						<xs:annotation>
+							<xs:documentation>Codice DATEX</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="desc" type="xs:NCName" use="required">
+						<xs:annotation>
+							<xs:documentation>Traduzione testuale del codice
+              DATEX</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="um" type="xs:NCName" use="required">
+						<xs:annotation>
+							<xs:documentation>Uniita' di misura dell'atributo
+              dell'evento</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SAD" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Consigli ed informazioni supplementari sull'evento, se
+      disponibili in questo tag sono forniti dettagli chiarificatori
+      dell'evento</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

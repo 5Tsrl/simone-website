@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Progetto Simone on </title>
+    <link>https://www.simone.5t.torino.it/</link>
+    <description>Recent content in Progetto Simone on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Mon, 27 Dec 2021 18:30:31 +0100</lastBuildDate><atom:link href="https://www.simone.5t.torino.it/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analisi sul traffico</title>
+      <link>https://www.simone.5t.torino.it/benefici/analisi/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/analisi/</guid>
+      <description>Le Amministrazioni locali elaborano periodicamente piani del traffico e della mobilità ed inoltre continuativamente, nella gestione ordinaria, sviluppano interventi su aree delimitate o assi stradali, incroci, rotonde, nodi di interscambio, ecc. Risulta pertanto necessario rilevare sul territorio sia per i piani, sia per i singoli interventi sulla viabilità, dati sui flussi di traffico, sulle prestazioni della rete, sugli spostamenti in generale, sugli attrattori e sui generatori della domanda, sulle matrici O/D degli spostamenti.</description>
+    </item>
+    
+    <item>
+      <title>Architettura di riferimento</title>
+      <link>https://www.simone.5t.torino.it/progetto/architettura/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/architettura/</guid>
+      <description>L&amp;rsquo;architettura del sistema prevede l&amp;rsquo;estensione delle funzionalità delle centrali di controllo della mobilità con informazioni di traffico in tempo reale generati da flotte attrezzate (floating car data). </description>
+    </item>
+    
+    <item>
+      <title>Domanda di mobilità</title>
+      <link>https://www.simone.5t.torino.it/servizi/domanda/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/domanda/</guid>
+      <description>Nelle grandi città sono in fase di studio/avvio iniziative di congestion charge e/o pollution charge, come ad esempio a Torino, Genova e Bologna che tra i partner del progetto dispongono già di sistemi funzionanti per il controllo degli accessi tramite varchi elettronici. Il progetto prevede la costituzione di un gruppo di lavoro tra le città interessate per realizzare uno studio congiunto delle metodologie e dei criteri per il controllo accessi per poi sviluppare uno strumento software flessibile ed in grado di realizzare le politiche di gestione della domanda di mobilità scelte da ogni singola città.</description>
+    </item>
+    
+    <item>
+      <title>Informazione agli automobilisti</title>
+      <link>https://www.simone.5t.torino.it/benefici/centri/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/centri/</guid>
+      <description>I centri locali di controllo della mobilità possono offrire servizi sia alle are metropolitane sia ai territori regionali ma possono anche essere di utilità per i piccoli comuni. Per comuni di piccole dimensioni lo sviluppo di sistemi ITS (esempio sistemi di misurazione del traffico o di controllo degli accessi) può risultare di difficile implementazione per motivi economici, organizzativi, di competenza, gestionali, ecc. Può pertanto risultare opportuno che un&#39;unica centrale di controllo regionale fornisca il servizio di elaborazione dei dati e di gestione sistemistica del sistema per tali comuni.</description>
+    </item>
+    
+    <item>
+      <title>Informazione agli automobilisti</title>
+      <link>https://www.simone.5t.torino.it/servizi/informazioni/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/informazioni/</guid>
+      <description>Il progetto prevede la realizzazione di servizi di infomobilità rivolti agli automobilisti e personalizzati in funzione della posizione e delle caratteristiche del veicolo e delle politiche di controllo adottate dalle Amministrazioni. Ad esempio potranno essere realizzati servizi rivolti ai cittadini a bordo veicolo per :  Fornire dettagli sullo stato del traffico, la presenza di incidenti e di altri eventi che inibiscono la viabilità sia in generale sia specificatamente sul percorso scelto dall’automobilista; Fornire informazioni sui posti disponibili nei parcheggi e nelle zone blu di sosta a pagamento unitamente alla possibilità di pagare la sosta; Fornire informazioni sulle limitazioni alla circolazione nelle vie o nelle aree della città, su eventuali costi di accesso alle aree ZTL ad esempio in funzione della posizione corrente del veicolo e/o della categoria ecologica, sulla disponibilità di “bonus” o “crediti di mobilità” per l’accesso alle aree controllate; Sperimentare servizi di pagamento da bordo veicolo per funzioni di mobilità (parcheggi, sosta, acquisto di crediti/bonus per ingressi alle aree limitate, ecc.</description>
+    </item>
+    
+    <item>
+      <title>Monitoraggio del traffico</title>
+      <link>https://www.simone.5t.torino.it/benefici/ztl/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/ztl/</guid>
+      <description>Nella gestione delle aree ZTL una parte gravosa per le Amministrazioni è la gestione dei permessi di transito che devono essere esibiti dai cittadini sulle vetture per il controllo da parte di Polizia Municipale o Stradale. Ad esempio a Torino sono circa 75000 i permessi autorizzativi di ingesso alla ZTL il cui rinnovo periodo è gestito da 2 appositi uffici dell’Amministrazione comunale aperti al pubblico. I sistemi di controllo elettronico degli accessi permettono di ridurre l’impegno di risorse umane necessarie sul territorio per la verifica ed inoltre garantiscono un controllo sistematico del rispetto delle regole di accesso.</description>
+    </item>
+    
+    <item>
+      <title>Monitoraggio del traffico</title>
+      <link>https://www.simone.5t.torino.it/servizi/monitoraggio/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/monitoraggio/</guid>
+      <description>L’utilizzo delle flotte di veicoli come acquisitori di dati (Floating Car Data) consente di aumentare l’estensione territoriale e la capillarità dei sistemi esistenti di rilevamento del traffico riducendo o sostituendo le infrastrutture necessarie sul territorio fino ad oggi indispensabili, sviluppando le piattaforme telematiche di gestione come previsto dai Piani Regionali di Infomobilità. Il servizio consiste nell’elaborazione dei dati puntuali messi a disposizione dalle flotte di veicoli per ottenere le informazioni in termini di flussi di traffico e velocità riferiti alla rete stradale, che possono essere utilizzati dalle applicazioni dei centri di controllo della mobilità per la stima del traffico sull’intera rete.</description>
+    </item>
+    
+    <item>
+      <title>Obiettivi generali</title>
+      <link>https://www.simone.5t.torino.it/progetto/obiettivi/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/obiettivi/</guid>
+      <description>Il progetto è coerente con un obiettivo più generale di spingere il Sistema Paese verso l’innovazione in un settore fondamentale come la mobilità per i suoi aspetti economici, ambientali e di qualità della vita. Il progetto si propone lo sviluppo di un modello che possa essere adottato su scala nazionale, basato sulla standardizzazione dei servizi e dei modelli gestionali e in grado di garantire l’interoperabilità tra i veicoli circolanti ed i centri di gestione della mobilità delle diverse aree metropolitane.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://www.simone.5t.torino.it/privacy-policy/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/privacy-policy/</guid>
+      <description>La presente nota informativa descrive le modalità di utilizzo dei cookie nel sito www.simone.5t.torino.it
+I cookie sono piccoli file di testo che il server web deposita sul dispositivo con cui l’utente naviga, senza identificarlo. Un cookie non può leggere dati personali salvati sul disco fisso o file di cookie creati da altri siti, poiché le sole informazioni che può contenere sono quelle fornite dall’utente stesso.
+Questo sito non fa uso di cookie.</description>
+    </item>
+    
+    <item>
+      <title>Protocollo di comunicazione</title>
+      <link>https://www.simone.5t.torino.it/protocollo/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/protocollo/</guid>
+      <description>Obiettivo del progetto Simone è stata la definizione di un protocollo standard che consenta la comunicazione tra i centri di controllo delle flotte, i Centri Servizi Veicoli (nel seguito CSV) e i Centri di Controllo Locale della Mobilità. Con riferimento all&amp;rsquo;immagine, che illustra l&amp;rsquo;architettura del progetto S.I.MO.NE., il protocollo di comunicazione è indicato con i numeri 1 e 3.
+La comunicazione (1) tra i centri di controllo delle flotte (front end) ed il Centro Servizi Veicoli è bidirezionale; i centri di controllo delle flotte trasferiscono i dati FCD verso il Centro Servizi Veicoli mentre quest’ultimo restituisce dati di traffico elaborati, eventi di traffico e informazioni sulle ZTL.</description>
+    </item>
+    
+    <item>
+      <title>Genova</title>
+      <link>https://www.simone.5t.torino.it/installazioni/genova/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:21 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/genova/</guid>
+      <description>Per garantire la massima trasferibilità dei risultati del progetto, il Comune di Genova cercherà di garantire la massima flessibilità delle interfacce della catena di propria competenza. Durante la fase progettuale si analizzeranno le possibilità di aggiudicare in modo congiunto, tra due o più città, gli sviluppi relativi alle interfacce e al supervisore.
+Dal punto di vista dell’organizzazione delle varie fasi del progetto, il Comune di Genova procederà come segue:
+ le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne del Comune, con l’eventuale apporto di consulenze specialistiche; lo sviluppo delle componenti del sistema di competenza del Comune di Genova saranno affidate ad un partner industriale appositamente selezionato con procedura da definire in fase progettuale; l’installazione dei sensori previsti a progetto saranno affidati ad uno o più soggetti industriali; l’esecuzione della sperimentazione sarà svolta in collaborazione tra personale del Comune (dipendenti e consulenti) e i soggetti industriali che avranno a vario titolo collaborato alla realizzazione del progetto.</description>
+    </item>
+    
+    <item>
+      <title>Firenze</title>
+      <link>https://www.simone.5t.torino.it/installazioni/firenze/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:16 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/firenze/</guid>
+      <description>La provincia di Firenze organizzerà le fasi del progetto secondo le seguenti modalità:  le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne della Provincia, con l’eventuale apporto di consulenze specialistiche o di specialisti appartenenti ad altri enti territoriali (es. Comune di Firenze); lo sviluppo delle componenti del sistema di competenza della Provincia di Firenze saranno affidate ad una impresa specializzata nello sviluppo di software a supporto della mobilità e dell’infomobilità, appositamente selezionata con procedura da definire in fase progettuale (ferma restando come sopra spiegato la possibilità di collaborazione con il Comune di Genova); le attività di adeguamento del sistema di supervisione del traffico dell’area fiorentina saranno svolte con le stesse modalità del punto precedente; l’installazione dei nuovi sensori previsti sarà affidata ad uno o più soggetti industriali mediante procedura da definire in fase progettuale; l’esecuzione della sperimentazione sarà svolta in collaborazione tra personale della Provincia (dipendenti e consulenti) e i soggetti industriali che avranno a vario titolo collaborato alla realizzazione del progetto.</description>
+    </item>
+    
+    <item>
+      <title>Cagliari</title>
+      <link>https://www.simone.5t.torino.it/installazioni/cagliari/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:09 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/cagliari/</guid>
+      <description>La provincia di Cagliari intende sfruttare le conoscenze ed esperienze già maturate da CTM s.p.a, di cui la provincia è azionaria con il 25% del capitale, nella progettazione, realizzazione e gestione di un complesso sistema di monitoraggio e controllo del traffico, nonché di servizi di infomobilità allargato anche al territorio provinciale. Già oggi,infatti, CTM gestisce attraverso il supervisore il sistema della mobilità pubblica e privata nelle funzioni di telecontrollo della flotta e della viabilità ,ZTL,varchi elettronici ,rilevazione dei flussi veicolari , infomobilità, ecc.</description>
+    </item>
+    
+    <item>
+      <title>Bologna</title>
+      <link>https://www.simone.5t.torino.it/installazioni/bologna/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:03 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/bologna/</guid>
+      <description>Il Comune di Bologna organizzerà il lavoro delle varie fasi del progetto secondo le seguenti modalità:  le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne della Comune, con l’eventuale apporto di consulenze specialistiche o di specialisti appartenenti ad altri enti territoriali; lo sviluppo delle componenti del sistema di competenza saranno affidate ad una impresa specializzata nello sviluppo di software a supporto della mobilità e dell’infomobilità, appositamente selezionata con procedura da definire in fase progettuale; le attività di adeguamento del sistema di supervisione del traffico e di sviluppo della piattaforma di gestione ZTL con le stesse modalità del punto precedente;  </description>
+    </item>
+    
+    <item>
+      <title>Torino</title>
+      <link>https://www.simone.5t.torino.it/installazioni/torino/</link>
+      <pubDate>Sat, 18 Dec 2021 10:17:56 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/torino/</guid>
+      <description>Le attività di coordinamento amministrativo e di rapporto formale verso il Dar e gli enti saranno condotte dal Settore Fondi Strutturali del Comune di Torino. Il Comune di Torino intende inoltre utilizzare le conoscenze ed esperienze già maturate da 5T s.r.l. nello sviluppo dei progetti ITS per il coordinamento tecnico del progetto e per la realizzazione del sistema a Torino ed ha deliberato l’acquisto di quote di 5T s.r.l. 5T s.</description>
+    </item>
+    
+    <item>
+      <title>Introduzione</title>
+      <link>https://www.simone.5t.torino.it/progetto/introduzione/</link>
+      <pubDate>Fri, 17 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/progetto/introduzione/</guid>
+      <description>In Italia l’utilizzo integrato di tecnologie informatiche e telematiche nel mondo dei trasporti ha consentito, nel corso degli ultimi anni, di sviluppare sistemi per il monitoraggio e la gestione di flotte, per il controllo del traffico e la regolazione dei cicli semaforici, per il rilievo dell’inquinamento atmosferico e per l’erogazione di servizi di infomobilità agli utenti della strada. Questi sistemi, seppure sviluppati in forma ancora poco coordinata e con risultati differenti, hanno evidenziato il ruolo strategico delle tecnologie telematiche nella risoluzione di problemi relativi alla mobilità.</description>
+    </item>
+    
+  </channel>
+</rss>

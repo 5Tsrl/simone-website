@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analisi sul traffico on </title>
+    <link>https://www.simone.5t.torino.it/benefici/</link>
+    <description>Recent content in Analisi sul traffico on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Mon, 27 Dec 2021 18:30:31 +0100</lastBuildDate><atom:link href="https://www.simone.5t.torino.it/benefici/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analisi sul traffico</title>
+      <link>https://www.simone.5t.torino.it/benefici/analisi/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/analisi/</guid>
+      <description>Le Amministrazioni locali elaborano periodicamente piani del traffico e della mobilità ed inoltre continuativamente, nella gestione ordinaria, sviluppano interventi su aree delimitate o assi stradali, incroci, rotonde, nodi di interscambio, ecc. Risulta pertanto necessario rilevare sul territorio sia per i piani, sia per i singoli interventi sulla viabilità, dati sui flussi di traffico, sulle prestazioni della rete, sugli spostamenti in generale, sugli attrattori e sui generatori della domanda, sulle matrici O/D degli spostamenti.</description>
+    </item>
+    
+    <item>
+      <title>Informazione agli automobilisti</title>
+      <link>https://www.simone.5t.torino.it/benefici/centri/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/centri/</guid>
+      <description>I centri locali di controllo della mobilità possono offrire servizi sia alle are metropolitane sia ai territori regionali ma possono anche essere di utilità per i piccoli comuni. Per comuni di piccole dimensioni lo sviluppo di sistemi ITS (esempio sistemi di misurazione del traffico o di controllo degli accessi) può risultare di difficile implementazione per motivi economici, organizzativi, di competenza, gestionali, ecc. Può pertanto risultare opportuno che un&#39;unica centrale di controllo regionale fornisca il servizio di elaborazione dei dati e di gestione sistemistica del sistema per tali comuni.</description>
+    </item>
+    
+    <item>
+      <title>Monitoraggio del traffico</title>
+      <link>https://www.simone.5t.torino.it/benefici/ztl/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/benefici/ztl/</guid>
+      <description>Nella gestione delle aree ZTL una parte gravosa per le Amministrazioni è la gestione dei permessi di transito che devono essere esibiti dai cittadini sulle vetture per il controllo da parte di Polizia Municipale o Stradale. Ad esempio a Torino sono circa 75000 i permessi autorizzativi di ingesso alla ZTL il cui rinnovo periodo è gestito da 2 appositi uffici dell’Amministrazione comunale aperti al pubblico. I sistemi di controllo elettronico degli accessi permettono di ridurre l’impegno di risorse umane necessarie sul territorio per la verifica ed inoltre garantiscono un controllo sistematico del rispetto delle regole di accesso.</description>
+    </item>
+    
+  </channel>
+</rss>

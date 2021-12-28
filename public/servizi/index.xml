@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informazione agli automobilisti on </title>
+    <link>https://www.simone.5t.torino.it/servizi/</link>
+    <description>Recent content in Informazione agli automobilisti on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Mon, 27 Dec 2021 18:30:31 +0100</lastBuildDate><atom:link href="https://www.simone.5t.torino.it/servizi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Domanda di mobilità</title>
+      <link>https://www.simone.5t.torino.it/servizi/domanda/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/domanda/</guid>
+      <description>Nelle grandi città sono in fase di studio/avvio iniziative di congestion charge e/o pollution charge, come ad esempio a Torino, Genova e Bologna che tra i partner del progetto dispongono già di sistemi funzionanti per il controllo degli accessi tramite varchi elettronici. Il progetto prevede la costituzione di un gruppo di lavoro tra le città interessate per realizzare uno studio congiunto delle metodologie e dei criteri per il controllo accessi per poi sviluppare uno strumento software flessibile ed in grado di realizzare le politiche di gestione della domanda di mobilità scelte da ogni singola città.</description>
+    </item>
+    
+    <item>
+      <title>Informazione agli automobilisti</title>
+      <link>https://www.simone.5t.torino.it/servizi/informazioni/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/informazioni/</guid>
+      <description>Il progetto prevede la realizzazione di servizi di infomobilità rivolti agli automobilisti e personalizzati in funzione della posizione e delle caratteristiche del veicolo e delle politiche di controllo adottate dalle Amministrazioni. Ad esempio potranno essere realizzati servizi rivolti ai cittadini a bordo veicolo per :  Fornire dettagli sullo stato del traffico, la presenza di incidenti e di altri eventi che inibiscono la viabilità sia in generale sia specificatamente sul percorso scelto dall’automobilista; Fornire informazioni sui posti disponibili nei parcheggi e nelle zone blu di sosta a pagamento unitamente alla possibilità di pagare la sosta; Fornire informazioni sulle limitazioni alla circolazione nelle vie o nelle aree della città, su eventuali costi di accesso alle aree ZTL ad esempio in funzione della posizione corrente del veicolo e/o della categoria ecologica, sulla disponibilità di “bonus” o “crediti di mobilità” per l’accesso alle aree controllate; Sperimentare servizi di pagamento da bordo veicolo per funzioni di mobilità (parcheggi, sosta, acquisto di crediti/bonus per ingressi alle aree limitate, ecc.</description>
+    </item>
+    
+    <item>
+      <title>Monitoraggio del traffico</title>
+      <link>https://www.simone.5t.torino.it/servizi/monitoraggio/</link>
+      <pubDate>Mon, 27 Dec 2021 18:30:31 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/servizi/monitoraggio/</guid>
+      <description>L’utilizzo delle flotte di veicoli come acquisitori di dati (Floating Car Data) consente di aumentare l’estensione territoriale e la capillarità dei sistemi esistenti di rilevamento del traffico riducendo o sostituendo le infrastrutture necessarie sul territorio fino ad oggi indispensabili, sviluppando le piattaforme telematiche di gestione come previsto dai Piani Regionali di Infomobilità. Il servizio consiste nell’elaborazione dei dati puntuali messi a disposizione dalle flotte di veicoli per ottenere le informazioni in termini di flussi di traffico e velocità riferiti alla rete stradale, che possono essere utilizzati dalle applicazioni dei centri di controllo della mobilità per la stima del traffico sull’intera rete.</description>
+    </item>
+    
+  </channel>
+</rss>

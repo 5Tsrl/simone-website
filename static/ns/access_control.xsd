@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="access_control_info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ztl" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="polyline">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="point" minOccurs="3" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>insieme ordinato dei punti che definiscono la polilinea</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="lat" use="required"/>
+												<xs:attribute name="lng" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="gates">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="gate" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute name="id" type="xs:integer" use="required"/>
+												<xs:attribute name="name" type="xs:string" use="required"/>
+												<xs:attribute name="type" use="required">
+													<xs:annotation>
+														<xs:documentation>ingresso/uscita</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="lat" type="xs:decimal" use="required"/>
+												<xs:attribute name="lng" type="xs:decimal" use="required"/>
+												<xs:attribute name="heading" type="xs:integer" use="required">
+													<xs:annotation>
+														<xs:documentation>direzione di ingresso/uscita nell'area (azimut)</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="access_policy" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="time_policy" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="day_of_week" type="dayTypePolicy">
+														<xs:annotation>
+															<xs:documentation>giorno della settimana</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="weekday" type="dayTypePolicy">
+														<xs:annotation>
+															<xs:documentation>giorno feriale</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="day_before_holiday" type="dayTypePolicy">
+														<xs:annotation>
+															<xs:documentation>giorno prefestvo</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+													<xs:element name="holiday" type="dayTypePolicy">
+														<xs:annotation>
+															<xs:documentation>giorno festivo</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="env_policy">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="criteria">
+														<xs:complexType>
+															<xs:attribute name="fuel_type" use="required">
+																<xs:annotation>
+																	<xs:documentation>diesel / benzina / GPL</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="env_type" use="required">
+																<xs:annotation>
+																	<xs:documentation>euro 0 / 6</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="vehicle_type"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="fare">
+										<xs:annotation>
+											<xs:documentation>tariffa dovuta per l'accesso, se prevista.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="start_date"/>
+									<xs:attribute name="end_date"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:integer" use="required"/>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="description"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="generation_time" type="xs:dateTime"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="dayTypePolicy">
+		<xs:attribute name="start_time" type="xs:time"/>
+		<xs:attribute name="end_time" type="xs:time"/>
+	</xs:complexType>
+</xs:schema>

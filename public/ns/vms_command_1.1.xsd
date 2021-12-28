@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Aurelio Ferrante (5T srl) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rev="http://www.autostrade.it/schema/road-events" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.autostrade.it/schema/road-events" schemaLocation="http://simone.5t.torino.it/ns/traffic_info.xsd"/>
+	<xs:element name="VMS_COMMAND_DATA">
+		<xs:annotation>
+			<xs:documentation>Struttura dati per il pilotaggio di pannelli VMS</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="VMS" type="VMS_DATA"/>
+			</xs:sequence>
+			<xs:attribute name="generation_time" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>istante di generazione del feed - il contenuto di due feed, a parita' di generation time, e' identico</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="source" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>identificativo della sorgente/fornitore dei dati</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="VMS_DATA">
+		<xs:annotation>
+			<xs:documentation>Informazioni dul pannello da comandare</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="COMMAND" type="COMMAND_DATA">
+				<xs:annotation>
+					<xs:documentation>Comandi/messaggi per il pannello</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" use="required">
+			<xs:annotation>
+				<xs:documentation>identificatore univoco del VMS</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="static" type="xs:boolean" default="true">
+			<xs:annotation>
+				<xs:documentation>i VMS statici (sia reali che virtuali) sono memorizzati in archivio ed hanno id univoco</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lat" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>latitudine nel sistema WGS84</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lng" type="xs:decimal">
+			<xs:annotation>
+				<xs:documentation>Longitudine nel sistema WGS84</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bearing" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Orientamento del VMS (fronte di visualizzazione = verso di percorrenza +/- 180)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="COMMAND_DATA">
+		<xs:annotation>
+			<xs:documentation>
+        Elenco dei messaggi da pubblicare. Ogni messaggio e' rappresentato come un evento in formato S.I.MO.NE.
+        Ad ogni COMMAND_DATA e' associata una priorita' di pubblicazione, ed una indicazione (opzionale) temporale di validita' di pubblicazione.
+      </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="rev:EVTS_RECORD_ROAD"/>
+		</xs:sequence>
+		<xs:attribute name="priority" type="xs:int" use="required">
+			<xs:annotation>
+				<xs:documentation>Priorita' di pubblicazione dell'evento</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<!--
+    <xs:attribute  name="start_time" type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+         Inizio validita' pubblicazione. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+
+    <xs:attribute  name="end_time" type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Fine validita' pubblicazione. Dopo questo orario, le informazioni relative all'evento potrebbero essere modificate
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    -->
+		<!-- Queste informazioni stanno nell'evento -->
+		<!--
+    <xs:sequence>
+      <xs:element name="LOCATION" type="LOC_DATA">
+        <xs:annotation>
+          <xs:documentation>Localizzazione dell'evento</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="start_time" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Inizio pubblicazione</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="end_time" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Fine pubblicazione</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    
+    <xs:attribute name="DOB" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Data Object Datex</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="PHR" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Frase Datex</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="SUR" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Informazioni aggiuntive</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    -->
+	</xs:complexType>
+	<!-- Anche la location sta nell'evento-->
+	<xs:element name="VMS_STATUS_DATA">
+		<xs:annotation>
+			<xs:documentation>Struttura dati per la diagnostica di base dei VMS</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="VMS" type="STATUS_DATA"/>
+			</xs:sequence>
+		<xs:attribute name="generation_time" type="xs:dateTime" use="required">
+				<xs:annotation>
+					<xs:documentation>Istante di generazione del feed</xs:documentation>
+				</xs:annotation>
+			</xs:attribute><xs:attribute name="source" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Codice identificativo della sorgente/fornitore dei dati</xs:documentation>
+				</xs:annotation>
+			</xs:attribute></xs:complexType>
+	</xs:element>
+	<xs:complexType name="STATUS_DATA">
+		<xs:annotation>
+			<xs:documentation>Informazioni sul pannello comandato</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded" minOccurs="0">
+			<xs:element name="MESSAGE">
+				<xs:complexType>
+					<xs:attribute name="SITUATION_ID" type="xs:string" use="required">
+						<xs:annotation>
+							<xs:documentation>Codice della situazione cui si riferisce il messaggio</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="EVT_ID" type="xs:string" use="required">
+						<xs:annotation>
+							<xs:documentation>Codice dell'evento internamente alla situazione</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="TEXT" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Testo visualizzato dal pannello</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				<xs:attribute name="start_time" type="xs:dateTime" use="optional">
+				<xs:annotation>
+					<xs:documentation>Istante di inizio pubblicazione del messaggio</xs:documentation>
+				</xs:annotation>
+			</xs:attribute><xs:attribute name="end_time" type="xs:dateTime" use="optional">
+				<xs:annotation>
+					<xs:documentation>Istante di fine pubblicazione del messaggio</xs:documentation>
+				</xs:annotation>
+			</xs:attribute></xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" use="required">
+			<xs:annotation>
+				<xs:documentation>Codice univoco del pannello</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="DIAGNOSTIC" use="required">
+			<xs:annotation>
+				<xs:documentation>Stato globale del pannello: può assumere valori ok, warning, down</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ok"/>
+					<xs:enumeration value="warning"/>
+					<xs:enumeration value="down"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>
+
+

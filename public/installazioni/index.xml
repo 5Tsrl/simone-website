@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Torino on </title>
+    <link>https://www.simone.5t.torino.it/installazioni/</link>
+    <description>Recent content in Torino on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-IT</language>
+    <lastBuildDate>Sat, 18 Dec 2021 10:17:56 +0100</lastBuildDate><atom:link href="https://www.simone.5t.torino.it/installazioni/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Genova</title>
+      <link>https://www.simone.5t.torino.it/installazioni/genova/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:21 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/genova/</guid>
+      <description>Per garantire la massima trasferibilità dei risultati del progetto, il Comune di Genova cercherà di garantire la massima flessibilità delle interfacce della catena di propria competenza. Durante la fase progettuale si analizzeranno le possibilità di aggiudicare in modo congiunto, tra due o più città, gli sviluppi relativi alle interfacce e al supervisore.
+Dal punto di vista dell’organizzazione delle varie fasi del progetto, il Comune di Genova procederà come segue:
+ le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne del Comune, con l’eventuale apporto di consulenze specialistiche; lo sviluppo delle componenti del sistema di competenza del Comune di Genova saranno affidate ad un partner industriale appositamente selezionato con procedura da definire in fase progettuale; l’installazione dei sensori previsti a progetto saranno affidati ad uno o più soggetti industriali; l’esecuzione della sperimentazione sarà svolta in collaborazione tra personale del Comune (dipendenti e consulenti) e i soggetti industriali che avranno a vario titolo collaborato alla realizzazione del progetto.</description>
+    </item>
+    
+    <item>
+      <title>Firenze</title>
+      <link>https://www.simone.5t.torino.it/installazioni/firenze/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:16 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/firenze/</guid>
+      <description>La provincia di Firenze organizzerà le fasi del progetto secondo le seguenti modalità:  le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne della Provincia, con l’eventuale apporto di consulenze specialistiche o di specialisti appartenenti ad altri enti territoriali (es. Comune di Firenze); lo sviluppo delle componenti del sistema di competenza della Provincia di Firenze saranno affidate ad una impresa specializzata nello sviluppo di software a supporto della mobilità e dell’infomobilità, appositamente selezionata con procedura da definire in fase progettuale (ferma restando come sopra spiegato la possibilità di collaborazione con il Comune di Genova); le attività di adeguamento del sistema di supervisione del traffico dell’area fiorentina saranno svolte con le stesse modalità del punto precedente; l’installazione dei nuovi sensori previsti sarà affidata ad uno o più soggetti industriali mediante procedura da definire in fase progettuale; l’esecuzione della sperimentazione sarà svolta in collaborazione tra personale della Provincia (dipendenti e consulenti) e i soggetti industriali che avranno a vario titolo collaborato alla realizzazione del progetto.</description>
+    </item>
+    
+    <item>
+      <title>Cagliari</title>
+      <link>https://www.simone.5t.torino.it/installazioni/cagliari/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:09 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/cagliari/</guid>
+      <description>La provincia di Cagliari intende sfruttare le conoscenze ed esperienze già maturate da CTM s.p.a, di cui la provincia è azionaria con il 25% del capitale, nella progettazione, realizzazione e gestione di un complesso sistema di monitoraggio e controllo del traffico, nonché di servizi di infomobilità allargato anche al territorio provinciale. Già oggi,infatti, CTM gestisce attraverso il supervisore il sistema della mobilità pubblica e privata nelle funzioni di telecontrollo della flotta e della viabilità ,ZTL,varchi elettronici ,rilevazione dei flussi veicolari , infomobilità, ecc.</description>
+    </item>
+    
+    <item>
+      <title>Bologna</title>
+      <link>https://www.simone.5t.torino.it/installazioni/bologna/</link>
+      <pubDate>Sat, 18 Dec 2021 10:23:03 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/bologna/</guid>
+      <description>Il Comune di Bologna organizzerà il lavoro delle varie fasi del progetto secondo le seguenti modalità:  le fasi progettuali e di stesura delle specifiche saranno sviluppate utilizzando risorse interne della Comune, con l’eventuale apporto di consulenze specialistiche o di specialisti appartenenti ad altri enti territoriali; lo sviluppo delle componenti del sistema di competenza saranno affidate ad una impresa specializzata nello sviluppo di software a supporto della mobilità e dell’infomobilità, appositamente selezionata con procedura da definire in fase progettuale; le attività di adeguamento del sistema di supervisione del traffico e di sviluppo della piattaforma di gestione ZTL con le stesse modalità del punto precedente;  </description>
+    </item>
+    
+    <item>
+      <title>Torino</title>
+      <link>https://www.simone.5t.torino.it/installazioni/torino/</link>
+      <pubDate>Sat, 18 Dec 2021 10:17:56 +0100</pubDate>
+      
+      <guid>https://www.simone.5t.torino.it/installazioni/torino/</guid>
+      <description>Le attività di coordinamento amministrativo e di rapporto formale verso il Dar e gli enti saranno condotte dal Settore Fondi Strutturali del Comune di Torino. Il Comune di Torino intende inoltre utilizzare le conoscenze ed esperienze già maturate da 5T s.r.l. nello sviluppo dei progetti ITS per il coordinamento tecnico del progetto e per la realizzazione del sistema a Torino ed ha deliberato l’acquisto di quote di 5T s.r.l. 5T s.</description>
+    </item>
+    
+  </channel>
+</rss>

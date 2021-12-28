@@ -1,0 +1,7 @@
+---
+title: "Monitoraggio del traffico"
+date: 2021-12-27T18:30:31+01:00
+---
+
+<img src="/img/varco_ztl.jpg" style="margin: 5px; float: right; width:400px;  border:0" >
+Nella gestione delle aree ZTL una parte gravosa per le Amministrazioni è la gestione dei permessi di transito che devono essere esibiti dai cittadini sulle vetture per il controllo da parte di Polizia Municipale o Stradale. Ad esempio a Torino sono circa 75000 i permessi autorizzativi di ingesso alla ZTL il cui rinnovo periodo è gestito da 2 appositi uffici dell’Amministrazione comunale aperti al pubblico. I sistemi di controllo elettronico degli accessi permettono di ridurre l’impegno di risorse umane necessarie sul territorio per la verifica ed inoltre garantiscono un controllo sistematico del rispetto delle regole di accesso. Con gli ulteriori sviluppi previsti dal presente progetto si creano le condizioni per sostituire i “permessi manuali” con autorizzazioni “virtuali” legate alla targa del veicolo, flessibili nel tempo e dipendenti ad esempio da criteri: ecologicità, diritti di accesso, crediti, road pricing, ecc. Alla gestione tradizionale praticata dagli uffici si può quindi nel tempo sostituire un uso sempre più diffuso da parte del cittadini degli strumenti offerti da internet, in coerenza con le direttive nazionali sul e-governement.
